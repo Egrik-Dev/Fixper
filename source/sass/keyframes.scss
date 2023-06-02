@@ -1,0 +1,58 @@
+@keyframes arrow-move {
+  0% {
+    transform: translateX(0px);
+  }
+  25% {
+    transform: translateX(5px);
+  }
+
+  50% {
+    transform: translateX(0px);
+  }
+
+  75% {
+    transform: translateX(5px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes blinking {
+  0% {
+    opacity: 1;
+  }
+
+  12% {
+    opacity: 0.75;
+  }
+
+  25% {
+    opacity: 0.5;
+  }
+
+  37% {
+    opacity: 0.25;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  63% {
+    opacity: 0.25;
+  }
+
+  75% {
+    opacity: 0.5;
+  }
+
+  88% {
+    opacity: 0.75;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

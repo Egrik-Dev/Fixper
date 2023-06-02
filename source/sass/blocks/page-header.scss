@@ -1,0 +1,152 @@
+.page-header {
+  background-color: $background;
+}
+
+.page-header__wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 25px 0 0 30px;
+
+  box-sizing: border-box;
+}
+
+.page-header__menu {
+  position: relative;
+
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid #994786;
+
+  &::before {
+    position: absolute;
+    bottom: -1px;
+    right: 0;
+
+    width: 30px;
+    height: 4px;
+
+    content: "";
+
+    background-color: #a95094;
+  }
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 10%;
+    height: 100%;
+    content: "";
+
+    pointer-events: none;
+    background: linear-gradient(
+      to left,
+      #a95094 0,
+      rgba(169, 80, 148, 0.1) 100%
+    );
+  }
+}
+
+.page-header__city {
+  position: relative;
+  padding-left: 30px;
+  margin-right: 35px;
+
+  color: $primary-color;
+
+  transition: 0.5s ease;
+
+  &::before {
+    position: absolute;
+    left: 0;
+
+    width: 20px;
+    height: 20px;
+
+    content: "";
+    background-image: url(../img/icon-geo.svg);
+  }
+
+  &:hover {
+    color: $orange-text;
+  }
+}
+
+.page-header__logo {
+  margin-right: auto;
+}
+
+.page-header__callback-btn {
+  margin-right: 30px;
+}
+
+@media (min-width: $tablet-width) {
+  .page-header__wrapper {
+    padding: 20px 0 0;
+  }
+
+  .page-header__menu {
+    justify-content: space-between;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .page-header__city {
+    margin-left: 30px;
+  }
+
+  .page-header__logo {
+    margin-left: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header__wrapper {
+    padding: 30px 135px 0;
+    align-items: baseline;
+    @include desktop-wrapper;
+  }
+
+  .page-header__main-nav {
+    margin-right: 160px;
+  }
+
+  .page-header__menu {
+    width: initial;
+    margin-bottom: 0;
+    order: 2;
+    justify-content: space-between;
+
+    border-bottom: none;
+  }
+
+  .page-header__logo {
+    margin-left: 0;
+    margin-right: 75px;
+    order: 1;
+    align-self: center;
+  }
+
+  .page-header__city {
+    margin-left: 0;
+    order: 1;
+  }
+
+  .page-header__callback-btn {
+    margin-right: 0;
+    order: 3;
+  }
+}

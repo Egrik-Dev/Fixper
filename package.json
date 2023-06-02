@@ -1,0 +1,32 @@
+{
+  "name": "fixper",
+  "version": "1.0.0",
+  "description": "Appl for assistance in repairing washing machines",
+  "main": "index.js",
+  "scripts": {
+    "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp start"
+  },
+  "author": "Egor Sorochinskiy",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "9.5.x",
+    "browser-sync": "^2.27.11",
+    "del": "^5.0.0",
+    "eslint": "^8.30.0",
+    "gulp": "^4.0.2",
+    "gulp-csso": "^3.0.1",
+    "gulp-imagemin": "7.1.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "8.0.x",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "5.1.x",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-svgstore": "^9.0.0",
+    "gulp-webp": "^4.0.1",
+    "sass": "^1.57.1",
+    "stylelint": "^14.16.0",
+    "stylelint-config-htmlacademy": "0.1.x"
+  }
+}

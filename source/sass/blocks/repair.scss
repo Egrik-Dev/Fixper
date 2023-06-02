@@ -1,0 +1,208 @@
+.repair {
+  overflow: hidden;
+}
+
+.repair__offer {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 30px 0;
+}
+
+.repair__offer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.repair__title {
+  margin-bottom: 25px;
+}
+
+.repair__sub-title {
+  margin: 0;
+
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: $primary-color;
+  letter-spacing: 0.5px;
+}
+
+.repair__sub-title-bold {
+  color: $orange-text;
+}
+
+.repair__btn {
+  position: absolute;
+  bottom: 35px;
+  z-index: 3;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: $primary-color;
+  box-sizing: border-box;
+
+  padding: 18px 50px;
+  border: none;
+  border-radius: 15px;
+  background-color: #000000;
+  cursor: pointer;
+
+  transition: 0.5s ease;
+
+  &:hover {
+    // background-color: #303030;
+    // border: 2px solid $orange-text;
+    color: $orange-text;
+    // opacity: 0.7;
+  }
+}
+
+.repair__images {
+  position: relative;
+
+  width: 340px;
+  height: 313px;
+
+  &::after {
+    position: absolute;
+    right: -20px;
+
+    height: 312px;
+    width: 185px;
+
+    content: "";
+
+    background: $background url(../img/graphics.webp) no-repeat center bottom;
+    background-size: cover;
+  }
+}
+
+.repair__image {
+  position: absolute;
+
+  &--repairman {
+    top: -10px;
+    right: -173px;
+    z-index: 2;
+
+    width: 349px;
+  }
+
+  &--washer {
+    bottom: 5px;
+    z-index: 1;
+
+    width: 195px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .repair__title,
+  .repair__sub-title {
+    text-align: center;
+  }
+
+  .repair__title {
+    font-weight: 800;
+    font-size: 67px;
+    line-height: 64px;
+  }
+
+  .repair__sub-title {
+    width: 480px;
+    margin-bottom: 35px;
+
+    font-size: 20px;
+  }
+
+  .repair__images {
+    width: 720px;
+    height: 545px;
+
+    &::after {
+      height: 544px;
+      width: 365px;
+    }
+  }
+
+  .repair__image--repairman {
+    top: inherit;
+    bottom: 0;
+    right: 0;
+
+    width: 575px;
+  }
+
+  .repair__image--washer {
+    bottom: 0;
+
+    width: 344px;
+  }
+
+  .repair__btn {
+    bottom: 75px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .repair__wrapper {
+    position: relative;
+
+    @include desktop-wrapper;
+    padding: 30px 135px 0;
+    box-sizing: border-box;
+  }
+
+  .repair__offer {
+    flex-direction: row;
+    padding: 0;
+  }
+
+  .repair__offer-container {
+    position: absolute;
+    right: 0;
+    top: 170px;
+
+    width: 664px;
+    z-index: 5;
+    align-items: flex-start;
+  }
+
+  .repair__title,
+  .repair__sub-title {
+    text-align: left;
+  }
+
+  .repair__btn {
+    position: initial;
+  }
+
+  .repair__images {
+    width: 781px;
+    height: 741px;
+
+    &::after {
+      right: 0;
+      left: 67px;
+
+      width: 449px;
+      height: 738px;
+    }
+  }
+
+  .repair__image--repairman {
+    width: 781px;
+  }
+
+  .repair__image--washer {
+    left: -108px;
+    bottom: 25px;
+
+    width: 418px;
+  }
+}

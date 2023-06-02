@@ -1,0 +1,155 @@
+.discount {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 0 25px;
+
+  background-color: #000000;
+}
+
+.discount__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.discount__close-btn {
+  position: absolute;
+  top: 19px;
+  left: 15px;
+
+  width: 14px;
+  height: 14px;
+
+  border: none;
+  background-color: transparent;
+
+  cursor: pointer;
+
+  &::after,
+  &::before {
+    position: absolute;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    content: "";
+
+    background-color: $primary-color;
+  }
+
+  &::after {
+    transform: rotate(45deg);
+  }
+
+  &::before {
+    transform: rotate(-45deg);
+  }
+}
+
+.discount__offer {
+  position: relative;
+
+  margin: 0 0 20px;
+  width: 311px;
+
+  color: $primary-color;
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+
+  &::after {
+    position: absolute;
+    top: 6px;
+    left: -5px;
+
+    width: 10px;
+    height: 10px;
+
+    content: "";
+
+    background-color: #78c23e;
+    border-radius: 50%;
+  }
+
+  &::after {
+    animation: blinking 1s infinite ease-in;
+  }
+}
+.discount__title {
+  color: $orange-text;
+
+  &--tablet {
+    color: inherit;
+  }
+}
+.discount__btn {
+  position: relative;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: $orange-text;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &::after {
+    position: absolute;
+    top: 9px;
+    right: -65px;
+
+    width: 50px;
+    height: 8px;
+
+    content: "";
+
+    background: url(../img/arrow.webp) no-repeat 0 0;
+  }
+
+  &:hover::after {
+    animation: arrow-move 1s;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .discount__title--tablet {
+    color: $orange-text;
+  }
+
+  .discount__offer {
+    width: 400px;
+
+    &::after {
+      top: 7px;
+      left: -15px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    .discount {
+      width: 1170px;
+
+      position: absolute;
+      bottom: 40px;
+      z-index: 5;
+
+      flex-direction: row;
+      justify-content: center;
+      padding: 15px 0;
+    }
+
+    .discount__wrapper {
+      flex-direction: row;
+    }
+
+    .discount__offer {
+      width: 770px;
+      margin: 0 40px 0;
+    }
+  }
+}

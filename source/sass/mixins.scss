@@ -1,0 +1,11 @@
+@mixin desktop-wrapper {
+  width: 1440px;
+  margin: 0 auto;
+}
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}

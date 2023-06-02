@@ -1,0 +1,31 @@
+.main-nav {
+  overflow: scroll;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.main-nav__list {
+  position: relative;
+
+  display: flex;
+  flex-direction: row;
+
+  @include reset-list;
+}
+
+.main-nav__link {
+  color: $primary-color;
+
+  transition: 0.5s ease;
+
+  &:hover {
+    color: $orange-text;
+  }
+}
+
+.main-nav__item {
+  margin-right: 30px;
+}
