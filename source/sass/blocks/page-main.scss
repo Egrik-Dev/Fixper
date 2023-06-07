@@ -1,3 +1,21 @@
 .page-main__repair {
+  margin-bottom: 35px;
+
   background-color: $background;
+}
+
+@media (min-width: $tablet-width) {
+  .page-main__repair {
+    margin-bottom: 65px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-main__repair {
+    margin-bottom: 110px;
+  }
+
+  .page-main__advantages {
+    @include desktop-wrapper;
+  }
 }

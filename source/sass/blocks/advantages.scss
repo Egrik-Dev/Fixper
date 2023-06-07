@@ -1,0 +1,106 @@
+.advantages {
+  padding: 0 50px 0 30px;
+}
+
+.advantages__list {
+  @include reset-list;
+  display: flex;
+  flex-direction: column;
+  gap: 50px 0;
+}
+
+.advantages__list-item {
+  position: relative;
+
+  padding-left: 115px;
+
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 26px;
+
+  &::after {
+    position: absolute;
+    top: -10px;
+    left: 0;
+
+    width: 90px;
+    height: 60px;
+
+    content: "";
+
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &--zip::after {
+    background-image: url(../img/icon-repair.svg);
+  }
+
+  &--tools::after {
+    background-image: url(../img/icon-diplom.svg);
+    left: 15px;
+  }
+
+  &--speed::after {
+    background-image: url(../img/icon-clock.svg);
+  }
+
+  &--masters::after {
+    background-image: url(../img/icon-user.svg);
+  }
+}
+
+.advantages__list-description {
+  margin: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .advantages__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 50px;
+  }
+
+  .advantages__list-item {
+    flex-basis: 30%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .advantages {
+    padding: 0 165px;
+    box-sizing: border-box;
+  }
+
+  .advantages__list {
+    gap: 50px 88px;
+    justify-content: start;
+  }
+
+  .advantages__list-item {
+    padding-left: 0;
+    padding-top: 100px;
+    flex-basis: 19%;
+
+    &::after {
+      height: 75px;
+    }
+
+    &--zip::after {
+      width: 112px;
+    }
+
+    &--tools::after {
+      width: 73px;
+    }
+
+    &--speed::after {
+      width: 105px;
+    }
+
+    &--masters::after {
+      width: 91px;
+    }
+  }
+}
